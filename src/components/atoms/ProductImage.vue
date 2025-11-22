@@ -1,0 +1,63 @@
+<template>
+  <div class="product-image">
+    <img :src="imageUrl" :alt="productName" class="image" />
+    <div v-if="addedCount" class="added-badge">
+      {{ addedCount }} günde {{ addedCount * 24 }} kişi ekledi
+    </div>
+  </div>
+  
+</template>
+
+<script>
+export default {
+  name: 'ProductImage',
+  props: {
+    imageUrl: {
+      type: String,
+      required: true
+    },
+    productName: {
+      type: String,
+      required: true
+    },
+    addedCount: {
+      type: Number,
+      default: 0
+    }
+  }
+}
+</script>
+
+<style scoped>
+.product-image {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  height: 500px; /* ✅ Yüksekliği artırdım */
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.added-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+</style>
