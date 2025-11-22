@@ -1,4 +1,3 @@
-<!-- components/molecules/SignupForm.vue -->
 <template>
   <form class="signup-form" @submit.prevent="handleSubmit">
 
@@ -7,7 +6,6 @@
       <p>Giriş yap veya Hesap Oluştur, fırsatları kaçırma!</p>
     </div>
 
-    <!-- Tab Butonları -->
     <div class="tab-buttons">
       <router-link 
         to="/login"
@@ -24,7 +22,7 @@
         Üye Ol
       </button>
     </div>
-    <!-- Telefon Numarası -->
+    
     <div class="form-group">
       <label class="form-label">Telefon Numarası</label>
       <div class="phone-input-group">
@@ -45,7 +43,6 @@
       </div>
     </div>
 
-    <!-- E-Posta -->
     <div class="form-group">
       <label class="form-label">E-Posta Adresi</label>
       <Input
@@ -55,7 +52,6 @@
       />
     </div>
 
-    <!-- Şifre -->
     <div class="form-group">
       <label class="form-label">Şifre</label>
       <Input
@@ -68,7 +64,6 @@
       </div>
     </div>
 
-    <!-- Cinsiyet Seçimi -->
     <div class="form-group">
       <label class="form-label">Cinsiyet</label>
       <div class="gender-group">
@@ -89,7 +84,6 @@
       </div>
     </div>
 
-    <!-- KVKK Onayları -->
     <div class="checkbox-group">
       <Checkbox v-model="form.kvkk1">
         Kampanya ve iletişim verilerinin tercih ettiğim iletişim bilgilerine 
@@ -112,7 +106,6 @@
       </div>
     </div>
 
-    <!-- Üye Ol Butonu -->
     <Button 
       type="submit" 
       variant="primary" 
@@ -124,7 +117,6 @@
       ÜYE OL
     </Button>
 
-    <!-- Sosyal Medya ile Kayıt -->
     <div class="social-signup">
       <div class="social-buttons">
         <Button 
@@ -165,7 +157,6 @@
 import { ref, computed } from 'vue'
 import Input from '../atoms/Input.vue'
 import Button from '../atoms/Button.vue'
-
 import Checkbox from '../atoms/Checkbox.vue'
 
 export default {

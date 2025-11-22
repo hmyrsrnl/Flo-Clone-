@@ -1,4 +1,3 @@
-<!-- organisms/MegaMenu.vue -->
 <template>
   <div 
     class="mega-menu" 
@@ -6,20 +5,17 @@
     @mouseenter="openMenu"
     @mouseleave="closeMenu"
   >
-    <!-- Trigger -->
     <div class="menu-trigger">
       <slot name="trigger">
         <span>{{ title }}</span>
       </slot>
     </div>
 
-    <!-- Mega Menu Content -->
     <div 
       v-if="isOpen && menuData" 
       class="mega-menu-content"
     >
       <div class="menu-grid">
-        <!-- Ana içerik kolonları -->
         <div 
           class="menu-column" 
           v-for="(column, index) in mainColumns" 
@@ -37,8 +33,6 @@
             </a>
           </div>
         </div>
-        
-        <!-- Popüler Markalar bölümü -->
         <div 
           v-if="hasBrands" 
           class="menu-column brands-section"
@@ -77,7 +71,7 @@ const props = defineProps({
 const isOpen = ref(false)
 const menuRef = ref(null)
 
-// Computed properties
+
 const hasBrands = computed(() => {
   return props.menuData.brands && props.menuData.brands.length > 0
 })
@@ -177,7 +171,6 @@ const closeMenu = () => {
   color: #FF6600;
 }
 
-/* Popüler Markalar bölümü */
 .brands-section {
   grid-column: span 2;
 }

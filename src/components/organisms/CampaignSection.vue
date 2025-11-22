@@ -1,8 +1,6 @@
-<!-- CampaignSection.vue - template kısmını güncelleyin -->
 <template>
   <div class="campaign-section container">
-    
-    <!-- 1. SLIDER - EN BAŞTA -->
+   
     <CampaignSlider 
       :campaigns="sliderCampaigns"
       :auto-slide="true"
@@ -10,8 +8,7 @@
       @campaign-click="handleSliderClick"
       class="campaign-slider-section"
     />
-
-    <!-- 3. Mini Kampanyalar -->
+ 
     <div class="mini-campaigns-grid">
       <CampaignCard 
         :image-url="campaign1"
@@ -27,7 +24,6 @@
       />
     </div>
 
-    <!-- 2. Ana Kampanya Bannerı -->
     <div class="main-campaign-banner">
       <CampaignCard 
         :image-url="campaign5"
@@ -36,7 +32,6 @@
       />
     </div>
 
-    <!-- 4. Büyük İndirim Kampanyaları -->
     <div class="discount-campaigns">
       <CampaignCard 
         v-for="(campaign, index) in discountCampaigns"
@@ -46,7 +41,7 @@
         @cardClick="goToCampaign(campaign.link)"
       />
     </div>
-    
+  
   </div>
 </template>
 
@@ -55,7 +50,7 @@ import CampaignCard from '../molecules/CampaignCard.vue';
 import CampaignSlider from './CampaignSlider.vue';
 import { useRouter } from 'vue-router'; 
 
-// 📸 Tüm kampanya fotoğrafları
+
 import campaign1 from '@/assets/images/campaign1.jpg';
 import campaign2 from '@/assets/images/campaign2.jpg';
 import campaign3 from '@/assets/images/campaign3.jpg';
@@ -63,7 +58,7 @@ import campaign4 from '@/assets/images/campaign4.jpg';
 import campaign5 from '@/assets/images/campaign5.jpg';
 import campaign6 from '@/assets/images/campaign6.jpg';
 
-// Slider fotoğrafları
+
 import slider1 from '@/assets/images/campaignslider1.jpg';
 import slider2 from '@/assets/images/campaignslider2.jpg';
 
@@ -85,7 +80,6 @@ export default {
       router.push(campaign.link);
     };
 
-    // Slider için kampanyalar
     const sliderCampaigns = [
       { 
         image: slider1, 
@@ -111,12 +105,9 @@ export default {
     ];
 
     return {
-      // Slider için
       sliderCampaigns,
       handleSliderClick,
-      
-      // Diğer kampanyalar için
-      floParaImage: campaign1, // veya özel bir fotoğraf
+      floParaImage: campaign1, 
       campaign1,
       campaign2,
       campaign3,
@@ -141,12 +132,10 @@ export default {
   padding: 0 20px;
 }
 
-/* Slider Section */
 .campaign-slider-section {
   margin-bottom: 30px;
 }
 
-/* Ana Kampanya Banner */
 .main-campaign-banner {
   margin-bottom: 25px;
 }
@@ -156,7 +145,6 @@ export default {
   border-radius: 12px;
 }
 
-/* Mini Kampanyalar Grid */
 .mini-campaigns-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -168,7 +156,6 @@ export default {
   height: 120px;
 }
 
-/* Büyük İndirim Kampanyaları */
 .discount-campaigns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -180,7 +167,6 @@ export default {
   height: 180px;
 }
 
-/* Kategori Kampanyaları */
 .category-campaigns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -191,7 +177,6 @@ export default {
   height: 140px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .campaign-section {
     padding: 15px 0;

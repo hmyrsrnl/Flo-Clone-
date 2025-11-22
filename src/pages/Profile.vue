@@ -1,14 +1,11 @@
-<!-- src/views/Profile/Profile.vue -->
 <template>
   <div class="profile-page">
     <div class="profile-container">
-      <!-- Header -->
       <div class="profile-header">
         <h1>Kullanıcı Bilgilerim</h1>
       </div>
 
       <div class="profile-content">
-        <!-- Sol Sidebar - Menü -->
         <div class="profile-sidebar">
           <nav class="sidebar-menu">
             <div class="menu-item">Tüm Siparişlerim</div>
@@ -27,17 +24,13 @@
             <div class="menu-item logout">Çıkış</div>
           </nav>
         </div>
-
-        <!-- Sağ İçerik - İKİ KOLON -->
         <div class="profile-main">
           <div class="two-column-layout">
-            <!-- SOL KOLON - Kullanıcı Bilgilerim -->
             <div class="column-left">
               <div class="user-info-section">
                 <h2>Kullanıcı Bilgilerim</h2>
                 
                 <div class="info-card">
-                  <!-- Ad -->
                   <div class="info-row">
                     <div class="info-label-group">
                       <label class="info-label">Ad</label>
@@ -49,8 +42,6 @@
                       >
                     </div>
                   </div>
-
-                  <!-- Soyad -->
                   <div class="info-row">
                     <div class="info-label-group">
                       <label class="info-label">Soyad</label>
@@ -62,8 +53,6 @@
                       >
                     </div>
                   </div>
-
-                  <!-- Doğum Tarihi -->
                   <div class="info-row">
                     <div class="info-label-group">
                       <label class="info-label">Doğum Tarihi</label>
@@ -75,8 +64,6 @@
                       >
                     </div>
                   </div>
-
-                  <!-- Cinsiyet Seçimi -->
                   <div class="info-row">
                     <label class="info-label">Cinsiyet</label>
                     <div class="gender-selection">
@@ -96,8 +83,6 @@
                       </button>
                     </div>
                   </div>
-
-                  <!-- KVKK Onayı -->
                   <div class="kvkk-section">
                     <label class="kvkk-checkbox">
                       <input type="checkbox" v-model="userInfo.kvkkAccepted">
@@ -105,18 +90,12 @@
                       Üyelik sözleşmesini okudum ve onaylıyorum.
                     </label>
                   </div>
-
-                  <!-- Güncelle Butonu -->
                   <button class="update-btn">
                     GÜNCELLE
                   </button>
                 </div>
-
-                <!-- İletişim Bilgileri -->
                 <div class="info-card">
                   <h3>İletişim Bilgileri</h3>
-                  
-                  <!-- Telefon -->
                   <div class="info-row">
                     <div class="info-label-group">
                       <label class="info-label">Cep Telefonu</label>
@@ -129,8 +108,6 @@
                     </div>
                     <button class="verify-btn">Güncelle</button>
                   </div>
-                  
-                  <!-- Email -->
                   <div class="info-row">
                     <div class="info-label-group">
                       <label class="info-label">E-Mail</label>
@@ -146,8 +123,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- SAĞ KOLON - Şifre Değişikliği -->
             <div class="column-right">
               <div class="password-section">
                 <h2>Şifre Değişikliği</h2>
@@ -158,7 +133,6 @@
                   </p>
                   
                   <div class="password-fields">
-                    <!-- Eski Şifre -->
                     <div class="form-group">
                       <label class="password-label">Eski Şifre</label>
                       <input 
@@ -168,8 +142,6 @@
                         class="password-input"
                       >
                     </div>
-                    
-                    <!-- Yeni Şifre -->
                     <div class="form-group">
                       <label class="password-label">Yeni Şifre</label>
                       <input 
@@ -179,8 +151,6 @@
                         class="password-input"
                       >
                     </div>
-                    
-                    <!-- Yeni Şifre Tekrar -->
                     <div class="form-group">
                       <label class="password-label">Yeni Şifre Tekrar</label>
                       <input 
@@ -191,8 +161,6 @@
                       >
                     </div>
                   </div>
-                  
-                  <!-- Şifre Güncelle Butonu -->
                   <button class="update-btn" :disabled="!isPasswordValid">
                     GÜNCELLE
                   </button>
@@ -272,7 +240,6 @@ export default {
   gap: 30px;
 }
 
-/* Sidebar Styles */
 .profile-sidebar {
   background: white;
   border-radius: 8px;
@@ -311,7 +278,6 @@ export default {
   padding-top: 15px;
 }
 
-/* Main Content - İKİ KOLON LAYOUT */
 .profile-main {
   background: white;
   border-radius: 8px;
@@ -331,7 +297,6 @@ export default {
   gap: 20px;
 }
 
-/* Başlıklar */
 .user-info-section h2,
 .password-section h2 {
   font-size: 18px;
@@ -340,14 +305,12 @@ export default {
   margin-bottom: 16px;
 }
 
-/* Kart Stilleri */
 .info-card {
   background: #fafafa;
   border-radius: 8px;
   padding: 24px;
 }
 
-/* Satır Stilleri */
 .info-row {
   display: flex;
   align-items: center;
@@ -383,7 +346,6 @@ export default {
   border-color: #FF6600;
 }
 
-/* Gender Selection */
 .gender-selection {
   display: flex;
   gap: 12px;
@@ -406,7 +368,6 @@ export default {
   border-color: #FF6600;
 }
 
-/* Verify Butonları */
 .verify-btn {
   padding: 8px 16px;
   background: #f0f0f0;
@@ -422,7 +383,6 @@ export default {
   background: #e0e0e0;
 }
 
-/* Password Section */
 .password-info {
   color: #666;
   font-size: 14px;
@@ -462,7 +422,6 @@ export default {
   border-color: #FF6600;
 }
 
-/* Update Butonları */
 .update-btn {
   background: #FF6600;
   color: white;
@@ -485,7 +444,6 @@ export default {
   cursor: not-allowed;
 }
 
-/* KVKK Checkbox */
 .kvkk-section {
   margin: 20px 0;
 }
@@ -526,7 +484,6 @@ export default {
   font-weight: bold;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .two-column-layout {
     grid-template-columns: 1fr;
@@ -544,7 +501,7 @@ export default {
   }
   
   .profile-sidebar {
-    display: none; /* Mobilde sidebar'ı gizle */
+    display: none; 
   }
 }
 </style>

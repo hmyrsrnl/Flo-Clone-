@@ -1,16 +1,12 @@
 <template>
   <div class="home">
-    <!-- Slider - Sadece resimler -->
     <HeroSlider
       :slides="sliderData"
       :auto-slide="true"
       :slide-interval="5000"
     />
-
-    <!-- Kampanyalar Bölümü -->
     <CampaignSection />
   </div>
-    
 </template>
 
 <script>
@@ -57,7 +53,6 @@ export default {
   flex: 1;
 }
 
-/* Hero Bölümü Stilleri */
 .hero {
   background: linear-gradient(135deg, #FF6600, #E55A00);
   color: white;
@@ -94,7 +89,6 @@ export default {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero {
     padding: 60px 20px;

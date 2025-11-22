@@ -16,12 +16,9 @@ export default {
   },
   methods: {
     formatPrice(p) { 
-      // Eğer gelen değer zaten String ise ve formatı uygunsa (ki öyle), direkt döndür.
       if (typeof p === 'string') {
-        return p; // Örn: '2.799,99 TL' döner.
+        return p; 
       }
-      
-      // Gelen değer sayı ise (gelecekteki kullanım için) eski formatlamayı uygula
       const n = Number(p) || 0; 
       return new Intl.NumberFormat('tr-TR', { minimumFractionDigits:2 }).format(n) + ' TL';
     }
@@ -30,8 +27,29 @@ export default {
 </script>
 
 <style scoped>
-.price-display { display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
-.current { font-size:16px; font-weight:800; color:#e74c3c; }
-.features { display:flex; gap:6px; flex-direction:column; align-items:flex-end; }
-.feature { font-size:12px; color:#00b14f; font-weight:600; }
+.price-display { 
+  display:flex; 
+  flex-direction:column; 
+  align-items:flex-end; 
+  gap:6px; 
+}
+
+.current { 
+  font-size:16px; 
+  font-weight:800; 
+  color:#e74c3c; 
+}
+
+.features { 
+  display:flex; 
+  gap:6px; 
+  flex-direction:column; 
+  align-items:flex-end; 
+}
+
+.feature { 
+  font-size:12px; 
+  color:#00b14f; 
+  font-weight:600; 
+}
 </style>

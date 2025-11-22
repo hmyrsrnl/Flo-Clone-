@@ -1,4 +1,3 @@
-<!-- organisms/MenuSection.vue -->
 <template>
   <div class="menu-section">
     <h3 v-if="title" class="section-title">{{ title }}</h3>

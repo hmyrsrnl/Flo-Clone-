@@ -1,7 +1,6 @@
 <template>
   <div class="flo-hero-slider-container">
     <div class="slider-wrapper">
-      <!-- Orijinal yapı korundu - sadece stil değişti -->
       <div 
         v-for="(slide, index) in slides"
         :key="index"
@@ -12,8 +11,6 @@
   
       </div>
     </div>
-
-    <!-- Slider Noktaları - Orijinal yapı korundu -->
     <div class="slider-dots">
       <div 
         v-for="(slide, index) in slides" 
@@ -146,8 +143,6 @@ export default defineComponent({
   z-index: 2;
 }
 
-
-/* Slider Noktaları - Orijinal yapı korundu */
 .slider-dots {
   position: absolute;
   bottom: 30px;
@@ -172,7 +167,6 @@ export default defineComponent({
   transform: scale(1.2);
 }
 
-/* Mobil */
 @media (max-width: 768px) {
   .flo-hero-slider-container {
     height: 400px;

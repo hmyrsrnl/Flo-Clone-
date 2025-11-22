@@ -1,24 +1,18 @@
 <template>
   <div class="cart-page">
     <div class="cart-container">
-      <!-- Sol Taraf -->
       <div class="left-column">
-        <!-- Sepetteki Ürünler -->
         <CartItems 
           :items="cartItems"
           @update-quantity="handleUpdateQuantity"
           @remove-item="handleRemoveItem"
         />
-        
-        <!-- Özel İndirimler -->
         <SpecialDiscounts 
           :products="specialDiscountProducts"
           @add-to-cart="handleAddToCart"
           @size-change="handleSizeChange"
         />
       </div>
-      
-      <!-- Sağ Taraf - Sipariş Özeti -->
       <div class="right-column">
         <CartSummary 
           :summary-data="cartSummary"
@@ -34,8 +28,6 @@
 import CartItems from '@/components/organisms/CartItems.vue'
 import SpecialDiscounts from '@/components/organisms/SpecialDiscounts.vue'
 import CartSummary from '@/components/organisms/CartSummary.vue'
-import { computed, onMounted } from 'vue' 
-import { useCart } from '@/composables/useCart'
 import product1 from '@/assets/images/product1.jpg'
 import product2 from '@/assets/images/product2.jpg'
 import product4 from '@/assets/images/product4.jpg'
@@ -52,7 +44,6 @@ export default {
   },
   data() {
     return {
-      // SEPETTEKİ ÜRÜNLER - görseldeki gibi 1 ürün var
       cartItems: [
         {
           id: 2,
@@ -66,7 +57,6 @@ export default {
           size: '38'
         }
       ],
-      // ÖZEL İNDİRİMLER - görseldeki gibi 3 ürün
       specialDiscountProducts: [
         {
           id: 1,
@@ -125,7 +115,6 @@ export default {
       this.updateCartSummary()
     },
     handleAddToCart(product) {
-      // Özel indirimden ürün sepete ekleme
       const newItem = {
         id: Date.now(),
         brand: product.brand,
@@ -148,7 +137,6 @@ export default {
     },
     handleCheckout() {
       console.log('Sepet onaylandı')
-      // Ödeme sayfasına yönlendirme
     },
     updateCartSummary() {
       const subtotal = this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)
@@ -193,7 +181,6 @@ export default {
   top: 20px;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .cart-container {
     grid-template-columns: 1fr;

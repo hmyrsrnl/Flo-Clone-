@@ -34,7 +34,7 @@ export default {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 12px;
-  height: 500px; /* ✅ Yüksekliği artırdım */
+  height: 500px;
   background: #f8f8f8;
   display: flex;
   align-items: center;

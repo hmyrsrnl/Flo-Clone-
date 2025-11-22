@@ -1,4 +1,3 @@
-<!-- organisms/AccountDropdown.vue -->
 <template>
   <div 
     class="account-dropdown" 
@@ -6,7 +5,6 @@
     @mouseenter="openDropdown"
     @mouseleave="closeDropdown"
   >
-    <!-- Trigger Buton -->
     <div class="dropdown-trigger">
       <slot name="trigger">
         <div class="nav-item">
@@ -15,12 +13,10 @@
       </slot>
     </div>
 
-    <!-- Dropdown Menu -->
     <div 
       v-if="isOpen" 
       class="dropdown-menu"
     >
-      <!-- Flo Plus Kampanyası -->
       <div class="menu-item campaign">
         <div class="campaign-title">Flo Plus ile Hızlı Öde Harcadıkça Kazan!</div>
         <div class="campaign-subtitle">Doğum Gününe Özel Fırsatlar</div>
@@ -57,7 +53,6 @@ const isOpen = ref(false)
 let closeTimeout = null
 
 const openDropdown = () => {
-  // Timeout'u temizle
   if (closeTimeout) {
     clearTimeout(closeTimeout)
     closeTimeout = null
@@ -66,7 +61,6 @@ const openDropdown = () => {
 }
 
 const closeDropdown = () => {
-  // Küçük bir gecikme ile kapat (kullanıcı menüye geçebilsin diye)
   closeTimeout = setTimeout(() => {
     isOpen.value = false
   }, 150)

@@ -41,7 +41,6 @@ export default {
   width: 100%;
 }
 
-/* Responsive */
 @media (max-width: 1200px) {
   .product-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

@@ -25,7 +25,7 @@ export default {
     },
     backgroundSize: {
       type: String,
-      default: 'cover' // cover, contain, auto
+      default: 'cover' 
     }
   },
   emits: ['cardClick']

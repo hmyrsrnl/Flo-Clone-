@@ -1,4 +1,3 @@
-<!-- components/atoms/Radio.vue -->
 <template>
   <label :class="['radio-container', { disabled }]">
     <input
@@ -90,11 +89,13 @@ export default {
   color: #333;
 }
 
-.radio-container:hover .radio-custom:not(.checked) {
+.radio-container:hover 
+.radio-custom:not(.checked) {
   border-color: #ccc;
 }
 
-.radio-container.disabled .radio-custom {
+.radio-container.disabled 
+.radio-custom {
   background-color: #f5f5f5;
   border-color: #eee;
 }

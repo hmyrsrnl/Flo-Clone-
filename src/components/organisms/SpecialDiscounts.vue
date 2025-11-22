@@ -258,7 +258,6 @@ export default {
   align-items: flex-start;
 }
 
-/* DÜZELTİLMİŞ FOTOĞRAF STİLİ - KESİLME OLMASIN */
 .special-discount-image {
   flex-shrink: 0;
   width: 100px;
@@ -268,7 +267,8 @@ export default {
   justify-content: center;
 }
 
-.special-discount-image .product-image {
+.special-discount-image 
+.product-image {
   width: 100%;
   height: 100%;
   display: flex;
@@ -276,7 +276,8 @@ export default {
   justify-content: center;
 }
 
-.special-discount-image .image {
+.special-discount-image 
+.image {
   width: 100%;
   height: 100%;
   object-fit: contain; 
@@ -376,7 +377,6 @@ export default {
   background: #ccc;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .discount-products-grid {
     grid-template-columns: 1fr;
@@ -411,7 +411,6 @@ export default {
     flex: 1;
   }
 
-  /* Mobilde fotoğraflar biraz daha büyük */
   .special-discount-image {
     width: 80px;
     height: 80px;

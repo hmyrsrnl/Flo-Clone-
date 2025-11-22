@@ -8,7 +8,7 @@
         :key="item.id" 
         class="cart-item"
       >
-        <!-- 1. Checkbox -->
+    
         <div class="item-checkbox">
           <input 
             type="checkbox" 
@@ -18,7 +18,6 @@
           >
         </div>
         
-        <!-- 2. Ürün Fotoğrafı -->
         <div class="item-image cart-item-image">
           <ProductImage 
             :image-url="item.imageUrl" 
@@ -26,7 +25,6 @@
           />
         </div>
         
-        <!-- 3. Ürün Bilgileri (Marka, Model, Kargo) -->
         <div class="item-info">
           <h3 class="item-brand">{{ item.brand }}</h3>
           <p class="item-name">{{ item.name }}</p>
@@ -35,7 +33,6 @@
           </p>
         </div>
         
-        <!-- 4. Beden Seçimi -->
         <div class="item-size">
           <SizeSelector
             :sizes="availableSizes"
@@ -43,8 +40,7 @@
             @size-change="(newSize) => updateSize(item.id, newSize)"
           />
         </div>
-        
-        <!-- 5. Miktar Kontrolü -->
+      
         <div class="item-quantity">
           <div class="quantity-selector">
             <button @click="decreaseQuantity(item.id)" class="qty-btn">-</button>
@@ -52,8 +48,7 @@
             <button @click="increaseQuantity(item.id)" class="qty-btn">+</button>
           </div>
         </div>
-        
-        <!-- 6. Fiyat -->
+       
         <div class="item-price">
           <span class="price">{{ formatPrice(item.price * item.quantity) }}</span>
           <span v-if="item.originalPrice > item.price" class="original-price">
@@ -61,7 +56,6 @@
           </span>
         </div>
         
-        <!-- 7. Silme Butonu -->
         <div class="item-remove">
           <button @click="removeItem(item.id)" class="remove-btn" title="Ürünü Sil">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -93,7 +87,7 @@ export default {
   emits: ['update-quantity', 'remove-item', 'toggle-selection', 'update-size'],
   data() {
     return {
-      availableSizes: ['36', '38', '40', '42', '44'] // Veya props'tan gelebilir
+      availableSizes: ['36', '38', '40', '42', '44'] 
     }
   },
   methods: {
@@ -156,7 +150,6 @@ export default {
   background: #fafafa;
 }
 
-/* 1. Checkbox */
 .item-checkbox {
   display: flex;
   align-items: center;
@@ -169,7 +162,6 @@ export default {
   cursor: pointer;
 }
 
-/* 2. Ürün Fotoğrafı */
 .cart-item-image {
   width: 100px;
   height: 150px;
@@ -187,7 +179,6 @@ export default {
   border-radius: 8px;
 }
 
-/* 3. Ürün Bilgileri */
 .item-info {
   display: flex;
   flex-direction: column;
@@ -221,14 +212,12 @@ export default {
   font-weight: 600;
 }
 
-/* 4. Beden Seçimi */
 .item-size {
   display: flex;
   justify-content: center;
   min-width: 100px;
 }
 
-/* 5. Miktar Kontrolü */
 .item-quantity {
   display: flex;
   justify-content: center;
@@ -268,7 +257,6 @@ export default {
   font-weight: 600;
 }
 
-/* 6. Fiyat */
 .item-price {
   display: flex;
   flex-direction: column;
@@ -289,7 +277,6 @@ export default {
   font-size: 0.9em;
 }
 
-/* 7. Silme Butonu */
 .item-remove {
   display: flex;
   justify-content: center;

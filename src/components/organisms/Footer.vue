@@ -1,10 +1,8 @@
 <template>
   <footer class="footer">
-    <!-- Ana Footer İçeriği -->
     <div class="main-footer">
       <div class="container">
         <div class="footer-content">
-          <!-- Sol Taraf - Link Tablosu -->
           <div class="links-section">
             <div class="links-container">
               <h4>Hakkımızda</h4>
@@ -50,7 +48,6 @@
                 <span>Çerez Ayarları</span>
               </div>
             </div>
-             <!-- Uygulama İndirme Butonları -->
              <div class="app-section">
               <h4>Mobil Uygulamalar</h4>
               <div class="app-downloads">
@@ -84,13 +81,7 @@
               </div>
             </div>
           </div>
-
-          <!-- Orta Taraf - Uygulama İndirme ve Sosyal Medya -->
           <div class="middle-section">
-           
-           
-
-            <!-- Sosyal Medya -->
             <div class="social-section">
               <h4>Takip Edin</h4>
               <div class="social-links">
@@ -117,8 +108,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Sağ Taraf - Bilgi Kartları -->
           <div class="info-section">
             <div class="info-card">
               <div class="info-icon">
@@ -178,8 +167,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Copyright -->
     <div class="copyright">
       <div class="container">
         <p>© 2025 FLO.COM.TR. TÜM HAKLARI SAKLIDIR.</p>
@@ -207,7 +194,6 @@ export default {
   padding: 0 20px;
 }
 
-/* Ana Footer */
 .main-footer {
   padding: 40px 0 20px;
 }
@@ -219,7 +205,6 @@ export default {
   align-items: start;
 }
 
-/* Link Tablosu */
 .links-section h4 {
   color: #000;
   font-size: 16px;
@@ -268,7 +253,6 @@ export default {
   color: #FF6600;
 }
 
-/* Orta Bölüm - Uygulama ve Sosyal Medya */
 .middle-section {
   display: flex;
   flex-direction: column;
@@ -283,7 +267,6 @@ export default {
   font-weight: bold;
 }
 
-/* Uygulama İndirme Butonları */
 .app-downloads {
   display: flex;
   flex-direction: row;
@@ -337,7 +320,6 @@ export default {
   margin-top: 2px;
 }
 
-/* Sosyal Medya */
 .social-links {
   display: flex;
   flex-direction: column;
@@ -368,7 +350,6 @@ export default {
   text-decoration: none;
 }
 
-/* Bilgi Kartları */
 .info-section {
   display: flex;
   flex-direction: column;
@@ -409,9 +390,8 @@ export default {
   margin: 0;
 }
 
-/* Copyright */
 .copyright {
-  background: #333;
+  color: #FF6600;
   padding: 15px 0;
   text-align: center;
   border-top: 1px solid #eee;
@@ -423,7 +403,6 @@ export default {
   margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;

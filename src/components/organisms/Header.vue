@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-    <!-- Üst Banner -->
     <div class="top-banner">
       <div class="container top-container">
         <span class="app-text">Mobil Uygulamayı <strong>Hemen İndir</strong></span>
@@ -15,11 +14,8 @@
         </div>
       </div>
     </div>
-
-    <!-- Ana Navigasyon -->
     <div class="main-nav">
       <div class="container main-container">
-        <!-- Sol kısım: Logo ve Ana kategoriler -->
         <div class="nav-left">
           <router-link to="/" class="logo">
             <img 
@@ -28,7 +24,6 @@
               class="logo-image"
             >
           </router-link>
-
           <nav class="main-categories">
             <router-link to="/category/kadin">Kadın</router-link>
             <router-link to="/category/erkek">Erkek</router-link>
@@ -36,40 +31,31 @@
           </nav>
         </div>
 
-        <!-- Arama kutusu -->
         <div class="search-section">
           <div class="search-box">
-            
             <input type="text" placeholder="Örneğin: Bot" />
           </div>
         </div>
 
-        <!-- Sağ ikonlar -->
         <div class="nav-right">
           <router-link to="/login" class="icon-btn">
             <span>Giriş Yap</span>
           </router-link>
-
-          <!-- Hover ile açılan dropdown -->
           <AccountDropdown>
             <template #trigger>
               <div class="icon-btn">
-                
                 <span>Hesabım</span>
               </div>
             </template>
           </AccountDropdown>
 
           <router-link to="/cart" class="icon-btn cart-btn">
-            
             <span>Sepetim</span>
-            
           </router-link>
         </div>
       </div>
     </div>
 
-    <!-- Alt kategori menüsü - MEGA MENU -->
     <div class="sub-nav">
       <div class="container sub-container">
         <nav class="sub-categories">
@@ -159,9 +145,9 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px; /* Tüm container'lar aynı genişlikte */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* Aynı yan padding */
+  padding: 0 20px; 
 }
 
 .top-links {
@@ -183,7 +169,7 @@ a {
   color: #FF6600;
 }
 
-/* Ana Header */
+
 .main-nav {
   padding: 10px 0;
   background: #fff;
@@ -194,9 +180,9 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 25px;
-  max-width: 1200px; /* Tüm container'lar aynı genişlikte */
+  max-width: 1200px; 
   margin: 0 auto;
-  padding: 0 20px; /* Aynı yan padding */
+  padding: 0 20px; 
 }
 
 .logo h1 {
@@ -215,7 +201,7 @@ a {
 .main-categories a {
   font-size: 17px;
   color: #222;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
 }
 
 .main-categories a.router-link-active,
@@ -223,7 +209,6 @@ a {
   color: #FF6600;
 }
 
-/* Arama Kutusu */
 .search-section {
   flex: 1;
   max-width: 600px;
@@ -252,7 +237,6 @@ a {
   opacity: 0.8;
 }
 
-/* Sağ ikonlar */
 .nav-right {
   display: flex;
   align-items: center;
@@ -278,7 +262,6 @@ a {
   font-size: 20px;
 }
 
-/* Sepet Badge */
 .cart-btn {
   position: relative;
 }
@@ -299,7 +282,6 @@ a {
   font-weight: bold;
 }
 
-/* Alt Menü */
 .sub-nav {
   background: #fafafa;
   border-top: 1px solid #eee;
@@ -341,6 +323,7 @@ a {
   height: 40px; 
   width: auto; 
 }
+
 .nav-left {
   display: flex;
   align-items: center;

@@ -1,4 +1,3 @@
-// src/data/menuData.js
 export const menuData = {
   ayakkabi: {
     columns: [

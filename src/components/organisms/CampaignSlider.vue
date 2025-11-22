@@ -18,7 +18,6 @@
       </div>
     </div>
 
-    <!-- Slider Dots -->
     <div class="campaign-slider-dots">
       <button
         v-for="(_, index) in campaigns"
@@ -153,7 +152,6 @@ export default {
   transform: scale(1.1);
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .campaign-slide-image {
     height: 350px;

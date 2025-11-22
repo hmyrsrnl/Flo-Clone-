@@ -1,4 +1,3 @@
-<!-- components/atoms/Checkbox.vue -->
 <template>
   <label :class="['checkbox-container', { disabled }]">
     <input
@@ -79,11 +78,13 @@ export default {
   flex: 1;
 }
 
-.checkbox-container:hover .checkbox-custom:not(.checked) {
+.checkbox-container:hover 
+.checkbox-custom:not(.checked) {
   border-color: #ccc;
 }
 
-.checkbox-container.disabled .checkbox-custom {
+.checkbox-container.disabled 
+.checkbox-custom {
   background-color: #f5f5f5;
   border-color: #eee;
 }

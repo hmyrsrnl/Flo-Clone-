@@ -1,4 +1,3 @@
-<!-- views/Signup/Signup.vue -->
 <template>
   <div class="signup-page">
     <div class="signup-container">

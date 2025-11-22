@@ -8,10 +8,12 @@
     <div class="size-selector">
       <span>Beden:</span>
       <select v-model="selectedSize" class="size-dropdown">
+        <option value="36">36</option>
         <option value="37">37</option>
         <option value="38">38</option>
         <option value="39">39</option>
         <option value="40">40</option>
+        <option value="41">41</option>
       </select>
     </div>
     <div class="price-section">
@@ -37,12 +39,49 @@ export default {
 </script>
 
 <style scoped>
-.shipping-info { font-size:13px; color:#444; }
-.shipping-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
-.shipping-header h5 { margin:0; font-size:14px; }
-.delivery-date { color:#888; font-size:12px; }
-.shipping-description { color:#777; margin:6px 0; }
-.size-selector { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
-.size-dropdown { padding:6px; border-radius:6px; border:1px solid #ddd; background:#fff; }
-.price { color:#e74c3c; font-weight:700; }
+.shipping-info { 
+  font-size:13px; 
+  color:#444; 
+}
+
+.shipping-header { 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  margin-bottom:6px; 
+}
+
+.shipping-header h5 { 
+  margin:0; 
+  font-size:14px; 
+}
+
+.delivery-date { 
+  color:#888; 
+  font-size:12px; 
+}
+
+.shipping-description { 
+  color:#777; 
+  margin:6px 0; 
+}
+
+.size-selector { 
+  display:flex; 
+  gap:8px; 
+  align-items:center; 
+  margin-bottom:8px; 
+}
+
+.size-dropdown { 
+  padding:6px; 
+  border-radius:6px; 
+  border:1px solid #ddd; 
+  background:#fff; 
+}
+
+.price { 
+  color:#e74c3c; 
+  font-weight:700; 
+}
 </style>

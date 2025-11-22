@@ -124,9 +124,6 @@ import { useRoute, useRouter } from 'vue-router'
 import RatingStars from '@/components/atoms/RatingStars.vue'
 import { useCart } from '@/composables/useCart'
 
-
-
-// Görsel importları
 import image1 from '@/assets/images/product2.jpg'
 import image2 from '@/assets/images/product2.1.jpg'
 import image3 from '@/assets/images/product2.2.jpg'
@@ -153,7 +150,6 @@ export default {
     const product = ref({})
     const selectedSize = ref(null)
 
-    // Tüm ürün verileri
     const allProducts = [
       {
         id: 1,
@@ -172,7 +168,7 @@ export default {
         monthlyPayment: '383,33',
         installmentCount: 6,
         description: 'Reebok VERSE Gri renk klasik tasarımı ve dayanıklı yapısıyla her tarza uygun.',
-        colors: [] // Reebok için renk seçeneği yok
+        colors: [] 
       },
       {
         id: 2,
@@ -222,21 +218,16 @@ export default {
 
     const goToColorPage = (color) => {
       console.log('Renk seçildi:', color)
-      // Seçilen renge göre ilgili ürün sayfasına yönlendir
       router.replace(color.url)
     }
 
-   // GÜNCELLENMİŞ SEPETE EKLEME FONKSİYONU
     const addToCartAndRedirect = () => {
       if (!selectedSize.value) {
         alert('Lütfen beden seçiniz!')
         return
       }
-      
-      // Sepete ekle
       addToCart(product.value, selectedSize.value)
       
-      // Sepet sayfasına yönlendir
       router.push('/cart')
     }
 
@@ -266,7 +257,6 @@ export default {
 </script>
 
 <style scoped>
-/* Stiller de rating-favorite kısmındaki son düzenlemeler geri alındı. */
 
 .product-detail-page {
   padding: 20px 0;
@@ -347,7 +337,6 @@ export default {
   margin-bottom: 20px;
 }
 
-/* Eski rating stilleri geri getirildi */
 .rating {
   display: flex;
   align-items: center;

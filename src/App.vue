@@ -1,18 +1,11 @@
 <template>
   <div id="app">
-    <!-- 1. Header (Tüm Sayfalarda Sabit) -->
     <Header @show-login="switchToLogin" />
-
-    <!-- 2. Ana İçerik Alanı: Sayfalar BURADA YÜKLENECEK -->
     <main class="main-content">
-      <router-view :key="$route.fullPath" /> <!-- KRİTİK: Home, Products, Cart sayfaları buraya gelir -->
+      <router-view :key="$route.fullPath" /> 
     </main>
-
-    <!-- 3. Footer (Tüm Sayfalarda Sabit) -->
     <Footer />
-    
-    <!-- Modallar (Tüm Sayfaların Üzerinde) -->
-    <!-- Not: AuthModal'a geçiş yapmanız, bu iki modalı yönetmeyi kolaylaştırır -->
+
     <LoginModal 
       :is-visible="showLoginModal"
       @close="showLoginModal = false"
@@ -63,7 +56,6 @@ export default {
     handleSocialLogin(provider) {
       console.log('Sosyal medya ile giriş:', provider)
     },
-    // Modallar arasında geçiş
     switchToLogin() {
       this.showSignupForm = false
       this.showLoginForm = true
@@ -77,19 +69,20 @@ export default {
 </script>
 
 <style>
-/* ... stilleriniz ... */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-/* Sayfa içeriğinin tüm boşluğu doldurması için */
+
 #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .main-content {
-  flex-grow: 1; /* router-view'ın tüm içeriği kaplamasını sağlar */
+  flex-grow: 1;
 }
 </style>

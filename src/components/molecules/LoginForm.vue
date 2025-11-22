@@ -1,12 +1,11 @@
 <template>
   <div class="login-form">
-    <!-- Başlık -->
+    
     <div class="login-header">
       <h2>Merhaba,</h2>
       <p>Giriş yap veya Hesap Oluştur, fırsatları kaçırma!</p>
     </div>
 
-    <!-- Tab Butonları -->
     <div class="tab-buttons">
       <button 
         :class="['tab-button', activeTab === 'login' ? 'active' : '']"
@@ -23,7 +22,6 @@
       </router-link>
     </div>
 
-    <!-- Giriş Formu -->
     <div v-if="activeTab === 'login'" class="form-content">
       <div class="input-group">
         <Input 
@@ -120,7 +118,6 @@ export default {
 </script>
 
 <style scoped>
-/* Mevcut stilleriniz aynı kalacak */
 .login-form {
   max-width: 400px;
   margin: 0 auto;
