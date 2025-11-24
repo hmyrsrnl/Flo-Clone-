@@ -1,9 +1,7 @@
-<!-- pages/ProductListing.vue -->
 <template>
   <div class="product-listing-page">
     <div class="container">
       <div class="page-layout">
-        <!-- Filtreleme Sidebar -->
         <aside class="filter-sidebar">
           <ProductFilter 
             :categories="filterCategories"
@@ -11,8 +9,6 @@
             @filter-change="handleFilterChange"
           />
         </aside>
-
-        <!-- Ana İçerik -->
         <main class="product-content">
           <div class="content-header">
             <h1 class="page-title">{{ pageTitle }}</h1>
@@ -37,7 +33,6 @@ import ProductFilter from '@/components/molecules/ProductFilter.vue'
 import { useRouter } from 'vue-router'
 import { computed, ref } from 'vue'
 
-// 📸 Resim import'ları
 import reebok from '@/assets/images/product1.jpg'
 import lumberjack from '@/assets/images/product2.jpg'
 import nike from '@/assets/images/product3.jpg'
@@ -60,12 +55,10 @@ export default {
   setup(props) {
     const router = useRouter()
 
-    // Filtre state'leri
     const selectedCategories = ref([])
     const priceRange = ref([0, 10000])
     const sortBy = ref('newest')
 
-    // Tüm ürünler
     const allProducts = [
       {
         id: 1,
@@ -154,7 +147,6 @@ export default {
       }
     ]
 
-    // Filtre kategorileri
     const filterCategories = [
       { label: 'Ayakkabı', value: 'ayakkabi' },
       { label: 'Spor Giyim', value: 'spor-giyim' },
@@ -165,37 +157,30 @@ export default {
 
     const maxPrice = 10000
 
-    // Filtreleme işlemi
     const handleFilterChange = (filters) => {
       selectedCategories.value = filters.categories
       priceRange.value = filters.priceRange
       sortBy.value = filters.sortBy
     }
 
-    // Filtrelenmiş ve sıralanmış ürünler
     const filteredProducts = computed(() => {
       let filtered = allProducts.filter(product => {
-        // Kategori filtresi
         if (props.category && product.category !== props.category) {
           return false
         }
         
-        // Fiyat aralığı filtresi
         const price = product.priceValue
         if (price < priceRange.value[0] || price > priceRange.value[1]) {
           return false
         }
         
-        // Kategori seçimleri (eğer varsa)
         if (selectedCategories.value.length > 0) {
-          // Burada ürünün kategorisi ile selectedCategories karşılaştırması yapılabilir
-          // Şu anlık tüm ürünleri gösteriyoruz
+          
         }
         
         return true
       })
 
-      // Sıralama
       switch (sortBy.value) {
         case 'name':
           filtered.sort((a, b) => a.name.localeCompare(b.name))
@@ -207,7 +192,6 @@ export default {
           filtered.sort((a, b) => b.priceValue - a.priceValue)
           break
         case 'newest':
-          // Varsayılan sıralama - ID'ye göre
           filtered.sort((a, b) => b.id - a.id)
           break
         case 'popular':
@@ -218,7 +202,6 @@ export default {
       return filtered
     })
 
-    // Sayfa başlığı
     const pageTitle = computed(() => {
       const titles = {
         'kadin': 'Kadın Ürünleri',
