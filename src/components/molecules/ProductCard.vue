@@ -22,6 +22,23 @@
         :features="product.features"
       />
     </div>
+
+    <div class="features-section">
+  <div class="features-grid">
+    <div class="feature free-shipping">
+      <span class="feature-icon"></span>
+      <span class="feature-text">Kargo Bedava</span>
+    </div>
+    <div class="feature coupon-offer">
+      <span class="feature-icon"></span>
+      <span class="feature-text">Kupon Fırsatı</span>
+    </div>
+    <div class="feature view-360">
+      <span class="feature-icon"></span>
+      <span class="feature-text">360 Görünüm</span>
+    </div>
+  </div>
+</div>
   </div>
 </template>
 
@@ -59,6 +76,11 @@ export default {
 
 <style scoped>
 .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-width: 0;
   border: 1px solid #e5e5e5;
   border-radius: 12px;
   padding: 16px;
@@ -67,6 +89,39 @@ export default {
   background: white;
 }
 
+.image-wrapper {
+  width: 100%;
+  flex: 0 0 auto;
+  background: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  max-height: 250px;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  max-width: 100%; 
+  max-height: 100%; 
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-image {
+  display: block;
+  margin: 0 auto;
+}
 .product-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -85,7 +140,6 @@ export default {
   line-height: 1.4;
   margin: 0;
   display: -webkit-box;
-  
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -98,5 +152,54 @@ export default {
   border: none;
   border-top: 1px solid #e5e5e5;
   margin: 8px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  min-height: 50px;
+}
+
+.free-shipping {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.coupon-offer {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  color: #e65100;
+  border: 1px solid #ffcc80;
+}
+
+.view-360 {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  color: #1565c0;
+  border: 1px solid #90caf9;
+}
+
+.feature-icon {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.feature-text {
+  font-size: 10px;
+  font-weight: 700;
 }
 </style>

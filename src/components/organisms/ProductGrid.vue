@@ -32,14 +32,18 @@ export default {
 <style scoped>
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 10px 0;
 }
 
 .product-item {
   width: 100%;
+  height: 100%;
+  min-width: 0;
 }
+
+
 
 @media (max-width: 1200px) {
   .product-grid {

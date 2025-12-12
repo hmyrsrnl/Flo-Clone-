@@ -70,7 +70,6 @@ export default {
         rating: 4.7,
         reviewCount: 246,
         addedCount: 3,
-        features: ['Kargo Bedava', 'Kupon Fırsatı', '360 Görünüm'],
         category: 'kadin',
         brand: 'Reebok',
         color: 'Gri'
@@ -84,7 +83,6 @@ export default {
         rating: 4.2,
         reviewCount: 451,
         addedCount: 3,
-        features: ['Kargo Bedava', 'Kupon Fırsatı', '360 Görünüm'],
         category: 'kadin',
         brand: 'Lumberjack',
         color: 'Beyaz'
@@ -98,7 +96,6 @@ export default {
         rating: 4.8,
         reviewCount: 189,
         addedCount: 2,
-        features: ['Kargo Bedava', 'Kupon Fırsatı', '360 Görünüm'],
         category: 'kadin',
         brand: 'Nike',
         color: 'Beyaz'
@@ -112,7 +109,6 @@ export default {
         rating: 4.5,
         reviewCount: 262,
         addedCount: 3,
-        features: ['Kargo Bedava', 'Kupon Fırsatı', '360 Görünüm'],
         category: 'kadin',
         brand: 'Kinetix',
         color: 'Gri'
@@ -126,7 +122,6 @@ export default {
         rating: 4.6,
         reviewCount: 324,
         addedCount: 4,
-        features: ['Kargo Bedava', 'Kupon Fırsatı', '360 Görünüm'],
         category: 'kadin',
         brand: 'Lotto',
         color: 'Pembe'
@@ -140,7 +135,6 @@ export default {
         rating: 4.9,
         reviewCount: 198,
         addedCount: 5,
-        features: ['Kargo Bedava', 'Kupon Fırsatı', '360 Görünüm'],
         category: 'kadin',
         brand: 'Lumberjack',
         color: 'Siyah'

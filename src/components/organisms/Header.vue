@@ -89,6 +89,7 @@
             :menu-data="menuData.indirim" 
             :columns="6" 
           />
+
           <router-link to="/products" class="simple-link">Tüm Kategoriler</router-link>
         </nav>
       </div>
@@ -158,6 +159,7 @@ export default {
 .sub-categories > *:not(.simple-link) {
   flex: 1;
   text-align: center;
+  height: 100%;
 }
 
 a {
@@ -290,9 +292,21 @@ a {
 
 .sub-categories {
   display: flex;
+  align-items: center;
   gap: 35px;
   justify-content: flex-start;
-  font-weight: 600; 
+  font-weight: 600;
+  height: 40px;
+  flex-wrap: nowrap; 
+  min-width: max-content; 
+}
+
+.sub-categories > * {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .sub-container {
@@ -305,6 +319,7 @@ a {
   color: #333;
   font-size: 15px;
   font-weight: 600; 
+  
 }
 
 .sub-categories a:hover,
