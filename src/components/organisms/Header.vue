@@ -203,7 +203,7 @@ a {
 .main-categories a {
   font-size: 17px;
   color: #222;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .main-categories a.router-link-active,

@@ -23,23 +23,17 @@
       />
     </div>
 
-    <div class="features-section">
-  <div class="features-grid">
-    <div class="feature free-shipping">
-      <span class="feature-icon"></span>
-      <span class="feature-text">Kargo Bedava</span>
-    </div>
-    <div class="feature coupon-offer">
-      <span class="feature-icon"></span>
-      <span class="feature-text">Kupon Fırsatı</span>
-    </div>
-    <div class="feature view-360">
-      <span class="feature-icon"></span>
-      <span class="feature-text">360 Görünüm</span>
+  <div class="features-section">
+    <div class="features-grid">
+      <div class="feature free-shipping">
+        <span class="feature-text">Kargo Bedava</span>
+      </div>
+      <div class="feature coupon-offer">
+        <span class="feature-text">Kupon Fırsatı</span>
+      </div>
     </div>
   </div>
 </div>
-  </div>
 </template>
 
 <script>
@@ -122,6 +116,7 @@ export default {
   display: block;
   margin: 0 auto;
 }
+
 .product-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -131,6 +126,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  text-align: left;
 }
 
 .product-name {
@@ -154,17 +150,23 @@ export default {
   margin: 8px 0;
 }
 
+.features-section {
+  width: 100%; 
+  display: flex; 
+  justify-content: flex-start;
+} 
+
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-top: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-top: 5px;
 }
 
 .feature {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 8px 4px;
   border-radius: 6px;
@@ -185,17 +187,6 @@ export default {
   background: linear-gradient(135deg, #fff3e0, #ffe0b2);
   color: #e65100;
   border: 1px solid #ffcc80;
-}
-
-.view-360 {
-  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-  color: #1565c0;
-  border: 1px solid #90caf9;
-}
-
-.feature-icon {
-  font-size: 16px;
-  margin-bottom: 4px;
 }
 
 .feature-text {

@@ -12,7 +12,6 @@ export default {
   name: 'PriceDisplay',
   props: {
     price: { type: [Number,String], required: true },
-    features: { type: Array, default: () => ['Kargo Bedava'] }
   },
   methods: {
     formatPrice(p) { 
@@ -30,7 +29,7 @@ export default {
 .price-display { 
   display:flex; 
   flex-direction:column; 
-  align-items:flex-end; 
+  align-items:flex-start; 
   gap:6px; 
 }
 
