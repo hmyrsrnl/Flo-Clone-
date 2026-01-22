@@ -1,38 +1,38 @@
-# flo-ecommerce
+# Flo Clone – E-Ticaret Arayüz Klonu
 
-This template should help get you started developing with Vue 3 in Vite.
+Bu proje, **Vue 3 ve Nuxt 3** kullanılarak geliştirilmiş bir **e-ticaret arayüz klonudur**.  
+Front-end tarafında tasarım ve kullanıcı etkileşimleri bulunur; ürün sayfaları, sepet/ürün listesi gibi
+kısımlar çalışır durumda gösterilir.
 
-## Recommended IDE Setup
+Bu proje, web programlama dersi/web geliştirme pratiği için yapılmış bir **frontend e-ticaret arayüzü**dür.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## Özellikler
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Vue 3 ve Nuxt 3 çerçevesi ile geliştirilmiş SPA yapısı  
+- Vite tabanlı hızlı geliştirme  
+- Ürün listeleme ve kategori yapısı (UI)  
+- Modern frontend yaklaşımları  
+- Responsive tasarım  
+- Firebase ya da backend entegrasyonu için temel yapı hazır (isteğe göre eklenebilir)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Kullanılan Teknolojiler
 
-## Project Setup
+- **Framework:** Vue 3, Nuxt 3  
+- **Build Tool:** Vite  
+- **Stil:** CSS / Tailwind (projeye göre)  
+- **Yapı:** Component tabanlı UI  
+- **Versiyon Kontrol:** Git
 
-```sh
-npm install
-```
+---
 
-### Compile and Hot-Reload for Development
+## Projenin Amacı
 
-```sh
-npm run dev
-```
+Nuxt 3 ile modern frontend geliştirme
+Component tabanlı UI
+Vue ve Nuxt ekosistemini öğrenme
+Web tasarım ve etkileşim pratiği
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
