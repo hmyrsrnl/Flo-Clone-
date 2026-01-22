@@ -31,8 +31,8 @@ Bu proje, web programlama dersi/web geliştirme pratiği için yapılmış bir *
 
 ## Projenin Amacı
 
--Nuxt 3 ile modern frontend geliştirme
--Component tabanlı UI
--Vue ve Nuxt ekosistemini öğrenme
--Web tasarım ve etkileşim pratiği
+- Nuxt 3 ile modern frontend geliştirme
+- Component tabanlı UI
+- Vue ve Nuxt ekosistemini öğrenme
+- Web tasarım ve etkileşim pratiği
 
